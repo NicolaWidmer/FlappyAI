@@ -22,20 +22,20 @@ pip install -r requirements.txt
 ```
 usage: main.py [-h] [-m {DQN,DDQN,CDDQN}] [-lr LR] [-ls LAYER_SIZE] [-g GAMMA] [-e EPSILON] [-t TAU] [-n EPISODES] [-s SEED] [-v VIDEO] [-c] [-p]
 
-FlappyAI is a programm which can usedifferent AI algorithms to learn how to play flappy bird
+FlappyAI is a program that can use different AI algorithms to learn how to play Flappy Bird
 
 options:
   -h, --help           show this help message and exit
-  -m {DQN,DDQN,CDDQN}  The alorithm you want to train the options are DQN for Deep Q-Network, DDQN for Double Deep Q-Network, CDDQN for Clipped
+  -m {DQN,DDQN,CDDQN}  The algorithm you want to train the options are DQN for Deep Q-Network, DDQN for Double Deep Q-Network, CDDQN for Clipped
                        Double Deep Q-Network
   -lr LR               The learning rate of the gradient descent
-  -ls LAYER_SIZE       The hidden layer size of the neural networks used by the alorithms
+  -ls LAYER_SIZE       The hidden layer size of the neural networks used by the algorithms
   -g GAMMA             The discount factor of the reward
-  -e EPSILON           Epsilon is used in the training of the AI's and describes the probability of takeing a random action
+  -e EPSILON           Epsilon is used in the training of the AI's and describes the probability of taking a random action
   -t TAU               The update factor for the target network
   -n EPISODES          The number of episodes to train
   -s SEED              The seed for the random generators
-  -v VIDEO             The path to where to video of the result should be stored
+  -v VIDEO             The path to where the videos should be stored
   -c                   Run all algorithms and compare them
   -p                   Play the game yourself
 ```
@@ -53,14 +53,14 @@ The plot was created by running
 ```
 python main.py -c -v mp4s
 ```
-and therfore using the default parameters.
+and therefore using the default parameters.
 
 ![Comparison](https://github.com/NicolaWidmer/FlappyAI/assets/61154523/cf5f58ff-4e01-4724-afc2-1f47ee9b70ea)
 
 
-The train/evaluation rewards plotted are averaged over the last 100 episodes otherwise the plot would be much more noisy. The gap between training and evaluation reward happens because during training with probability $\epsilon$ a random action is chosen, which may not be optimal. One can also see the typical problem of classical Deep Q-learning after some time, it gets overconfident about the learned Q-Value and begins to perform worse. Things which Double Deep Q-learning and Clipped Double Deep Q-Learning fix by some extent. 
+The train/evaluation rewards plotted are averaged over the last 100 episodes otherwise the plot would be much more noisy. The gap between training and evaluation reward happens because during training with probability $\epsilon$ a random action is chosen, which may not be optimal. One can also see the typical problem of classical Deep Q-learning after some time, it gets overconfident about the learned Q-Value and begins to perform worse. Things that Double Deep Q-learning and Clipped Double Deep Q-Learning to by some extent. 
 
-Below are videos of one episode during training for different algorithms and different number of train episodes.
+Below are videos of one episode during training for different algorithms and different numbers of train episodes.
 
 ### DQN
 

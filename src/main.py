@@ -151,12 +151,12 @@ def parse_args():
         model_options += f"{key} for {value}, "
     model_options = model_options[:-2]
 
-    parser = argparse.ArgumentParser(description= "FlappyAI is a programm which can usedifferent AI algorithms to learn how to play flappy bird")
+    parser = argparse.ArgumentParser(description= "FlappyAI is a program that can use different AI algorithms to learn how to play Flappy Bird")
 
     parser.add_argument('-m',
                         action="store", dest="model",
                         choices=agent_dict.keys(),
-                        help='The alorithm you want to train the options are '+ model_options,
+                        help='The algorithm you want to train the options are '+ model_options,
                         default='CDDQN')
     
     parser.add_argument('-lr',
@@ -168,7 +168,7 @@ def parse_args():
     parser.add_argument('-ls',
                         action="store", dest="layer_size",
                         type=int,
-                        help='The hidden layer size of the neural networks used by the alorithms',
+                        help='The hidden layer size of the neural networks used by the algorithms',
                         default='50')
     
     parser.add_argument('-g',
@@ -180,7 +180,7 @@ def parse_args():
     parser.add_argument('-e',
                         action="store", dest="epsilon",
                         type=float,
-                        help='Epsilon is used in the training of the AI\'s and describes the probability of takeing a random action',
+                        help='Epsilon is used in the training of the AI\'s and describes the probability of taking a random action',
                         default='0.05')
      
     parser.add_argument('-t',
@@ -203,7 +203,7 @@ def parse_args():
     
     parser.add_argument('-v',
                         action="store", dest="video",
-                        help='The path to where to video of the result should be stored',
+                        help='The path to where the videos should be stored',
                         default='None')
     
     parser.add_argument('-c',
