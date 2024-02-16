@@ -58,7 +58,7 @@ and therfore using the default parameters.
 ![Comparison](https://github.com/NicolaWidmer/FlappyAI/assets/61154523/cf5f58ff-4e01-4724-afc2-1f47ee9b70ea)
 
 
-The trian/evaluation rewards plotted are averaged over the last 100 episodes otherwise the plot would be much more noisy. The gap between training and evaluation reward happens because during training with probability $\epsilon$ a random action is chosen, which may not be optimal. One can also see the typical problem of classical Deep Q-learning after some time, it gets overconfident about the learned Q-Value and begins to perform worse. Things which Double Deep Q-learning and Clipped Double Deep Q-Learning fix by some extent. 
+The train/evaluation rewards plotted are averaged over the last 100 episodes otherwise the plot would be much more noisy. The gap between training and evaluation reward happens because during training with probability $\epsilon$ a random action is chosen, which may not be optimal. One can also see the typical problem of classical Deep Q-learning after some time, it gets overconfident about the learned Q-Value and begins to perform worse. Things which Double Deep Q-learning and Clipped Double Deep Q-Learning fix by some extent. 
 
 Below are videos of one episode during training for different algorithms and different number of train episodes.
 
