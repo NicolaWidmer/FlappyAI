@@ -2,7 +2,8 @@
 
 My reimplementation of various Deep reinforcement learning algorithms such as [Deep Q-learning](https://arxiv.org/abs/1312.5602), [Double Deep Q-learning](https://arxiv.org/pdf/1509.06461.pdf) and [Clipped Double Deep Q-Learning](https://arxiv.org/pdf/1802.09477.pdf). The algorithms are then used to learn how to play a variation of Flappy Bird. The evaluation can be found in the [evaluation](#evaluation) section.
 
-<video width="800" height="600" src="example.mp4" autoplay loop></video>
+https://github.com/NicolaWidmer/FlappyAI/raw/main/media/example.mp4
+
 Video of Clipped Double Deep Q-Learning playing Flappy Bird after 600 episodes of training.
 
 # Requirements
