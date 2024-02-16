@@ -202,7 +202,7 @@ class Game:
 
         pygame.display.quit()
 
-        subprocess.run(f"ffmpeg -r 30 -f image2 -s {WIDTH}x{HEIGHT} -i mp4s/screen_%04d.png -vcodec libx264 -crf 25  {video_filename}.mp4",
+        subprocess.run(f"ffmpeg -r 30 -f image2 -s {WIDTH}x{HEIGHT} -i mp4s/screen_%04d.png -vcodec libx264 -crf 25 -pix_fmt yuv420p {video_filename}.mp4",
                        shell=True,
                        stdout=subprocess.DEVNULL,
                        stderr=subprocess.STDOUT)
