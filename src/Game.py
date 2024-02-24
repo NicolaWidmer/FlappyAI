@@ -98,8 +98,8 @@ class Game:
 
     def step(self,action):
 
-        if action == 1:
-            self.bird.v = SPEED_AFTER_ACTION
+        
+        self.bird.v =int(SPEED_AFTER_ACTION * action + self.bird.v * (1 - action))
 
         self.bird.move()
 

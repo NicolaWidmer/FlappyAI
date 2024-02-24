@@ -6,11 +6,13 @@ class ReplayBuffer:
 
     def __init__(self,batch_size: int,
                 min_size: int,
-                max_size: int) -> None:
+                max_size: int,
+                action_type: torch.dtype = torch.int64) -> None:
         
         self.queue = deque(maxlen=max_size)
         self.batch_size = batch_size
         self.min_size = min_size
+        self.action_type = action_type
 
     def put(self,transition):
         self.queue.append(transition)
@@ -27,7 +29,7 @@ class ReplayBuffer:
             notdone_list.append([notdone])
         
         s_batch = torch.tensor(s_list, dtype=torch.float)
-        a_batch = torch.tensor(a_list, dtype=torch.int64)
+        a_batch = torch.tensor(a_list, dtype=self.action_type)
         r_batch = torch.tensor(r_list, dtype=torch.float)
         s_prime_batch = torch.tensor(next_s_list, dtype=torch.float)
         notdone_batch = torch.tensor(notdone_list, dtype=torch.float)
